@@ -1,0 +1,3 @@
+[Unit]
+Description=I/K-bus network devices
+RefuseManualStart=yes

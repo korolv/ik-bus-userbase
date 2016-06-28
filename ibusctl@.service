@@ -1,0 +1,13 @@
+[Unit]
+Description=UP/DOWN for I/K-bus device %i
+Requires=ibusdev.target
+After=ibusdev.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/ip link set dev %i up
+ExecStop=/usr/bin/ip link set dev %i down
+
+[Install]
+WantedBy=multi-user.target

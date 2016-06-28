@@ -1,0 +1,12 @@
+[Unit]
+Description=Set line discipline number 26 for %i I/K-bus net device
+Conflicts=serial-getty@%i.service
+BindsTo=dev-%i.device
+After=dev-%i.device
+Before=ibusdev.target
+
+[Service]
+ExecStart=/usr/bin/ldattach 26 /dev/%i -d
+
+[Install]
+WantedBy=ibusdev.target

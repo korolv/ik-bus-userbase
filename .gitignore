@@ -31,3 +31,10 @@
 # Debug files
 *.dSYM/
 *.su
+
+# Netbeans files
+nbproject/
+
+# Tools result
+ibus0send
+ibus0dump
