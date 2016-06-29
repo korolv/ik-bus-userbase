@@ -11,7 +11,8 @@ install : tools
 	install -m 0755 ibus0dump $(PREFIX)/bin
 
 uninstall : $(PREFIX)/bin/ibus0send $(PREFIX)/bin/ibus0dump
-	rm -f $(PREFIX)/bin/midilcm
+	rm -f $(PREFIX)/bin/ibus0send
+	rm -f $(PREFIX)/bin/ibus0dump
 
 ibus0send: ibus_send.c
 	$(CC) $(CFLAGS) ibus_send.c -o ibus0send
